@@ -25,7 +25,7 @@
                                 <td class="px-6 py-4">{{$item->product_name}}</td>
                                 <td class="px-6 py-4">{{$item->product_price}}</td>
                                 <td class="px-6 py-4">{{$item->product_color}}</td>
-                                <td class="px-6 py-4"><img src="{{$item->product_image}}" style="height:30px;" /></td>
+                                <td align="center" class="px-6 py-4"><img src="{{$item->product_image}}" style="height:30px;" /></td>
                                 <td class="px-6 py-4">
                                     <a role="button" class="product_edit" data-id="{{$item->product_id}}"><i class="fa fa-edit fa-2x text-black hover:text-yellow-500 edit_btn pr-2"></i></a>
                                     @if(Auth::user()->hasRole('superadmin') || Auth::user()->hasRole('admin'))

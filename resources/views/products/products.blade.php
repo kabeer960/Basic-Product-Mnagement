@@ -2,25 +2,25 @@
 @section('content')
 
     <div class="container mx-auto mt-10">
-    <h1 class="mb-4 text-4xl font-bold leading-none tracking-tight text-gray-900 md:text-4xl lg:text-5xl dark:text-white text-center mt-3">Our Products</h1>
-        <div class="grid lg:grid-cols-6 gap-5 mt-5">
+        <h1 class="mb-4 text-4xl font-bold leading-none tracking-tight text-gray-900 md:text-4xl lg:text-5xl dark:text-white text-center mt-3">Our Products</h1>
+        <div class="grid lg:grid-cols-4 gap-5 mt-5">
             @foreach($items as $item)
             <div class="max-w-sm rounded overflow-hidden shadow-lg">
-                <img class="w-full" src="{{$item->product_image}}" height="100px" alt="Sunset in the mountains">
+                <img class="w-full" src="{{$item->product_image}}" height="100px" class="img-fluid">
                 <div class="px-6 py-4">
-                    <div class="font-bold text-xl mb-2 text-center">Name: {{$item->product_name}}</div>
+                    <p class="font-bold text-xl mb-2 text-center">Name: {{$item->product_name}}</p>
                     <p class="text-gray-700 text-base text-center">Color: {{$item->product_color}}</p>
                     <p class="text-gray-700 text-base text-center">Price: {{$item->product_price}}</p>
                     <div class="mt-3">
-                        <a data-id="{{$item->product_id}}" data-aos="flip-left" data-aos-duration="1500" role="button" class="buynow_btn block bg-green-500 hover:bg-green-600 rounded-lg text-white py-2 pl-9 font-bold add_product">Buy Now</a>
-                    </div>
-
-                    
+                        <a data-id="{{$item->product_id}}" role="button" class="buynow_btn block bg-green-500 hover:bg-green-600 rounded-lg text-white text-center py-2 font-bold">Buy Now</a>
+                    </div>  
                 </div>
             </div>
             @endforeach
         </div>
     </div>
+
+   
 
 
     <!-- Main modal -->

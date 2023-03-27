@@ -25,6 +25,8 @@
                                     <a role="button" class="myorder_cancel bg-red-500 py-2 px-3 text-white" data-id="{{$item->order_id}}">Cancel</a>
 								@elseif($item->order_status == 'Canceled')
 									<a role="button" class="myorder_reorder bg-green-500 py-2 px-3 text-white" data-id="{{$item->order_id}}">Re Order</a>
+								@elseif($item->order_status == 'Delivered')
+									<p class="text-green-500 font-bold">Delivered</p>
 								@else
 									<p class="text-green-500 font-bold">Deliver Soon!</p>
 								@endif
